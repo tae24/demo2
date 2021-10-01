@@ -1,0 +1,68 @@
+@charset "UTF-8";
+
+// @mixin fz($size: 16){
+//   font-size: ($size / 10) + rem;
+// }
+
+html{
+  font-size: 62.5%;
+  /*文字サイズの自 動調整*/
+  -webkit-text-size-adjust: 100%;    
+  // ヘッド内リンクのフォント読み込み
+  font-family: 'Noto Serif JP', serif;
+  font-style: normal;
+}
+
+ // 下線
+a{
+  color: black;
+  text-decoration:none;
+  // cursor: none;
+}
+
+a:hover{
+  text-decoration: underline;
+  // color: #01FFFF;
+}
+
+img{
+  // display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+//メニュー開いたら、そのほかの要素をスクロールできなくするやつ
+// html.is-fixed,
+// html.is-fixed body {
+//     @media all and (max-width: 1024px) {
+//         height: 100%;
+//         overflow: hidden;
+//     }
+// }
+
+
+// * {
+//     outline: 2px solid red;
+// }
+
+// カーソル変更
+// body{
+//   position: relative;
+//   /*もともとあるカーソルは非表示に*/
+//   cursor: none; 
+//   height:100vh;
+// }
+
+// #cursor{
+//   position: fixed;
+//   /*丸の大きさと色の指定*/
+//   background: #FF4400;
+//   border-radius:10px;
+//   width: 12px;
+//   height: 12px;
+//   margin: -10px 0 0 -10px;/*真ん中にくるようにマイナスマージンで調整*/
+//   z-index: 999;/*一番手前に来るように*/
+//   pointer-events: none;/*クリックできなくなるのを防ぐため。noneで対応*/
+//   opacity: 0;
+// }

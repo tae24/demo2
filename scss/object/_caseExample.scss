@@ -1,0 +1,81 @@
+.caseExample{
+  &__container{
+    max-width: 1440px;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+  }
+  &__title{
+    margin-bottom: 3rem;
+    @include tab{
+      margin-bottom: 6rem;
+    }
+    @include pc{
+      margin-bottom: 9rem;
+    }
+  }
+  &__flex{
+    @include tab{
+      display: flex;
+    }
+  }
+  &__wrapper{
+    width: 90%;
+    margin: 0 auto;
+    @include tab{
+      width: 80%;
+      
+    }
+  }
+  &__img{
+    margin-bottom: 3rem;
+    @include tab{
+      width: 370px;
+      height: 250px;
+    }
+    @include pc{
+      width: 430px;
+      height: 280px;
+    }
+  }
+  &__menu{
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  &__item{
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+  &__text{
+    font-size: 1.6rem;
+    margin-bottom: 5rem;
+    &::before{
+      content:"";
+      display:block;
+      width:26rem;
+      border: 1px solid #000000;
+      margin: 0 auto;
+      margin-bottom: 1.1rem;
+    }
+    &::after{
+      content:"";
+      display:block;
+      width:26rem;
+      border: 1px solid #000000;
+      margin: 0 auto;
+      margin-top: 1.1rem;
+    }
+  }
+  &__btn{
+    font-size: 2rem;
+    padding: 12px 40px;
+    background-color: cl(white);
+    margin-bottom: 11rem;
+    @include tab{
+      margin-bottom: 15rem;
+    }
+    @include pc{
+      margin-bottom: 18rem;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+$colors: (
+  white: #FFFFFF,
+  black: #000,
+);
+
+@function cl($key) {
+  @return map-get($colors, $key);
+}
+
+// color: cl(white);
+// background-color: cl(black);

@@ -1,0 +1,67 @@
+.footer{
+  &__container{
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: cl(black);
+    padding-top: 3.2rem;
+  }
+  &__flex{
+    @include tab{
+      display: flex;
+      flex-direction:row-reverse;
+      justify-content:space-between;
+    }
+  }
+  &__logo{
+    width: 92px;
+    height: 38px;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    @include tab{
+      margin: 0;
+      margin-left: 5rem;
+    }
+    @include pc{
+      margin: 0;
+      margin-left: 17rem;
+    }
+  }
+  &__text{
+    color: cl(white);
+    text-align: center;
+    padding-bottom: 1.5rem;
+    font-size: 1.2rem;
+  }
+}
+
+.footerNav{
+  &__menu{
+    text-align: center;
+    margin-bottom: 5rem;
+    @include tab{
+      display: flex;
+      justify-content:flex-end;
+      margin-right: 10rem;
+    }
+    @include pc{
+      margin-right: 17rem;
+    }
+  }
+}
+
+.footerNavMenu{
+  &__list{
+    margin-bottom: 2.1rem;
+    @include tab{
+      margin-left: 4rem;
+    }
+    @include pc{
+      margin-left: 6rem;
+    }
+  }
+  &__link{
+    font-size: 1.8rem;
+    color: cl(white);
+  }
+}

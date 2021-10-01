@@ -1,0 +1,206 @@
+.header{
+  position: absolute;
+  z-index: 999;
+  @include tab{
+    display: flex;
+    justify-content: space-around;
+    // justify-content: space-between;
+  }
+  &__container{
+    // maxつけると位置変わる
+    // max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    @include tab{
+      
+    }
+  }
+  &__title{
+    width: 60px;
+    height: 25px;
+    margin-left: 20px;
+    margin-top: 10px;
+    @include tab {
+      width: 130px;
+      height: 50px;
+      margin-top: 0;
+      padding-top: 30px;
+    }
+    @include pc{
+      width: 138px;
+      height: 60px;
+    }
+  }
+  &__nav{
+    position: fixed;
+    top: 0;
+    // 左に隠す
+    left: -300px;
+    bottom: 0;
+    // 出てくる幅左に隠してる幅と同じにしてる
+    width: 300px;
+    // クリック後のバックカラー
+    background: #ffffff;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    // 変わる速度
+    transition: all .5s;
+    // 上に来るように
+    z-index: 3;
+    // opacity: 0;
+    @include tab {
+      // display: block;
+      position: static;
+      background: none;
+      width: auto;
+    }
+  }
+}
+
+// 左から出てくる。ジェークエリのopen部分
+.open .header__nav {
+  left: 0;
+  // opacity: 1;
+}
+
+.globalNav{
+  &__menu{
+    // display: flex;
+    margin-top: 47px;
+    @include tab {
+      display: flex;
+      flex-direction:row;
+      // 右からの長さ確認必要
+      margin-right: 5rem;
+    }
+    @include pc{
+      // 右からの長さ確認必要
+      margin-right: 7rem;
+    }
+  }
+}
+
+.globalNavMenu{
+  &__list{
+    margin-top: 8rem;
+    margin-left: 5rem;
+    @include tab {
+      padding-left: 5rem;
+      // ここ変更した
+      margin: 0 auto;
+    }
+    @include pc{
+      padding-left: 5rem;
+    }
+  }
+  &__link{
+    font-size: 1.5rem;
+    &::after{
+      content:"";
+      // 下に並べる
+      display:block;
+      width:160px;
+      height:2px;
+      background-color:#B0D4E4;
+      margin-top: 2rem;
+    }
+    @include tab {
+      font-size: 1.3rem;
+      font-weight: lighter;
+      &::after{
+        content: none;
+      }
+    }
+    @include pc{
+      font-size: 1.8rem;
+    }
+  }
+}
+
+/*============
+.burger__btn
+=============*/
+
+.burger{
+  &__btn{
+    display: block;
+    position: fixed;
+    // position: absolute;
+    top: 15px;
+    right: 30px;
+    width: 30px;
+    height: 30px;
+    transition: all .5s;
+    // cursor: pointer;
+    z-index: 5;
+  }
+}
+
+/*============
+// バツボタン
+=============*/
+
+.bar{
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background-color: #333;
+  border-radius: 4px;
+  transition: all .5s;
+  &__top{
+    top: 4px;
+  }
+  &__mid{
+    top: 14px;
+  }
+  &__bottom{
+    bottom: 4px;
+  }
+  @include tab{
+    display: none;
+  }
+}
+
+/*============
+// バツ回る
+=============*/
+.open .burgerBtn .bar{
+  background-color: #fff;
+}
+
+.open .burgerBtn .bar__top{
+  -webkit-transform: translateY(10px) rotate(-315deg);
+  transform: translateY(10px) rotate(-315deg);
+}
+
+.open .burgerBtn .bar__mid{
+  opacity: 0;
+}
+
+.open .burgerBtn .bar__bottom{
+  -webkit-transform: translateY(-10px) rotate(315deg);
+  transform: translateY(-10px) rotate(315deg);
+}
+
+/*============
+#mask
+=============*/
+#mask {
+  display: none;
+  transition: all .5s;
+}
+.open #mask {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: .8;
+  z-index: 2;
+  // cursor: pointer;
+}

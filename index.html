@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="format-detection" content="email=no,telephone=no,address=no">
+  <meta name="description" content="蒼乃の建設のコンセプト">
+  <meta name="format-detection" content="telephone=no">
+  <title>【だんさん課題】</title>
+  <!-- 外部ファイルの読み込み -->
+  <!-- <script src="【ファイルのURL】"></script> -->
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- フォント -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+</head>
+<body>
+  <!-- ヘッダー -->
+  <header class="header header__container">
+    <h1 class="header__title"><img class="header__logo" src="images/header_logo.png" alt="蒼乃建設"></h1>
+      <!-- ハンバーガーボタン -->
+      <!-- <div class="burgerBtn burger__btn"> -->
+      <div class="burgerBtn burger__btn">
+        <span class="bar bar__top"></span>
+        <span class="bar bar__mid"></span>
+        <span class="bar bar__bottom"></span>
+      </div>
+      <div id="mask"></div>
+      <nav class="globalNav header__nav">
+        <ul class="globalNavMenu globalNav__menu">
+          <li class="globalNavMenu__list"><a class="globalNavMenu__link" href="#">企業理念</a></li>
+          <li class="globalNavMenu__list"><a class="globalNavMenu__link" href="#">施工事例</a></li>
+          <li class="globalNavMenu__list"><a class="globalNavMenu__link" href="#">採用情報</a></li>
+          <li class="globalNavMenu__list"><a class="globalNavMenu__link" href="#">お問い合わせ</a></li>
+        </ul>
+      </nav>
+  </header>
+  <!-- メイン -->
+  <main class="main main__container">
+    <h2 class="main__title">街を作る。未来を作る。</h2>
+    <picture>
+      <source media="(min-width:560px)" srcset="images/mainpc.jpg" alt="青い屋根の大きなお家の写真">
+      <img class="main__img" src="images/mainsp.jpg" width="480" height="280" alt="青い屋根の大きなお家の写真">
+    </picture>
+  </main>
+  <!-- お知らせ -->
+  <section class="news news__container">
+    <h3 class="news__title  same__title">お知らせ</h3>
+    <dl class="news__menu">
+      <dt class="news__date">2020.11.17</dt>
+      <dd class="news__text">本社打合せ室が完成しました。</dd>
+      <dt class="news__date">2020.11.10</dt>
+      <dd class="news__text">【メディア掲載】住宅建築 2020年11月号。</dd>
+      <dt class="news__date">2020.11.01</dt>
+      <dd class="news__text">ホームページが完成しました。</dd>
+    </dl>
+  </section>
+  <!-- 施工事例 -->
+  <section class="caseExample caseExample__container">
+    <h3 class="caseExample__title same__title">施工事例</h3>
+    <div class="caseExample__flex">
+      <div class="caseExample__wrapper">
+        <picture>
+          <source media="(min-width:560px)" srcset="images/building1pc.jpg" alt="青い屋根の大きなお家の写真">
+          <img class="caseExample__img" src="images/building1sp.jpg" width="335" height="218" alt="青い屋根の大きなお家の写真">
+        </picture>
+        <p class="caseExample__menu">M様邸新築工事</p>
+        <p class="caseExample__item">埼玉県</p>
+        <p class="caseExample__text"><a class="caseExample__link" href="#">▷ 詳細を見る</a></p>
+      </div>
+      <div class="caseExample__wrapper">
+        <picture>
+          <source media="(min-width:560px)" srcset="images/building2pc.jpg" alt="高層ビルの写真">
+          <img class="caseExample__img" src="images/building2sp.jpg" width="335" height="218" alt="高層ビルの写真">
+        </picture>
+        <p class="caseExample__menu">スカイビル</p>
+        <p class="caseExample__item">東京都</p>
+        <p class="caseExample__text"><a class="caseExample__link" href="#">▷ 詳細を見る</a></p>
+      </div>
+    </div>
+    <!-- <form class="form caseExample__form" action="#" method="post">
+      <input class="btn caseExample__btn" type="submit" value="施工実績一覧">
+    </form> -->
+    <button class="btn caseExample__btn"><a class="caseExample__lead" href="#">施工実績一覧</a></button>
+  </section>
+    <!-- 企業理念 -->
+  <section class="philosophy philosophy__container">
+    <div class="philosophy__wrapper">
+      <h3 class="philosophy__title"><a class="philosophy__link" href="#">企業理念</a></h3>
+        <picture>
+          <source media="(min-width:560px)" srcset="images/companysppc.jpg" alt="">
+          <img class="philosophy__img" src="images/companysppc.jpg" width="375" height="375" alt="">
+        </picture>
+    </div>
+    <div class="philosophy__wrapper">
+      <h3 class="philosophy__title"><a class="philosophy__link" href="#">採用情報</a></h3>
+        <picture>
+          <source media="(min-width:560px)" srcset="images/contactsppc.jpg" alt="">
+          <img class="philosophy__img" src="images/contactsppc.jpg" width="375" height="375" alt="">
+        </picture>
+    </div>
+    <div class="philosophy__wrapper">
+      <h3 class="philosophy__title"><a class="philosophy__link" href="#">お問い合わせ</a></h3>
+        <picture>
+          <source media="(min-width:560px)" srcset="images/recruitsppc.jpg" alt="">
+          <img class="philosophy__img" src="images/recruitsppc.jpg" width="375" height="375" alt="">
+        </picture>
+    </div>
+  </section>
+  <!-- フッター -->
+  <footer class="footer footer__container">
+    <div class="footer__flex">
+      <nav class="footerNav footer__nav">
+        <!-- クラス名変更必要 -->
+        <ul class="footerNavMenu footerNav__menu">
+          <li class="footerNavMenu__list"><a class="footerNavMenu__link" href="#">企業理念</a></li>
+          <li class="footerNavMenu__list"><a class="footerNavMenu__link" href="#">施工事例</a></li>
+          <li class="footerNavMenu__list"><a class="footerNavMenu__link" href="#">採用情報</a></li>
+          <li class="footerNavMenu__list"><a class="footerNavMenu__link" href="#">お問い合わせ</a></li>
+        </ul>
+      </nav>
+      <div class="footer__logo"><img class="footer__img" src="images/footer_logo.png" alt="蒼乃建設のロゴ"></div>
+    </div>
+    <p class="footer__text"><small class="footer__small">© 2020 Aono Construction industry. Co., Ltd.</small></p>
+  </footer>
+  <!-- カーソル -->
+  <div id="cursor"></div>
+  <!-- ハンバーガー -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- テキストバラバラ -->
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+  <!-- ジェークエリーファイル -->
+  <script src="./js/script.js"></script>
+</body>
+</html>

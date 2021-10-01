@@ -1,0 +1,47 @@
+.philosophy{
+  &__container{
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    @include tab{
+      display: flex;
+      flex-direction:row;
+    }
+    @include pc{
+      display: flex;
+      flex-direction:row;
+    }
+  }
+  &__wrapper{
+    position: relative;
+    text-align: center;
+  }
+  &__title{
+    font-size: 2.6rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    margin:0;
+    padding:0;
+    @include tab{
+      font-size: 2.6rem;
+    }
+    @include pc{
+      font-size: 3.6rem;
+    }
+  }
+  &__link{
+    color: cl(white);
+  }
+  &__img{
+    vertical-align:top;
+    width: 100%;
+    @include pc{
+      width: 480px;
+      height: 480px;
+    }
+  }
+}

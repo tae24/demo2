@@ -1,0 +1,44 @@
+// カーソル変更
+
+// body{
+//   position: relative;
+//   /*もともとあるカーソルは非表示に*/
+//   cursor: none; 
+//   height:100vh;
+// }
+
+// #cursor{
+//   position: fixed;
+//   /*丸の大きさと色の指定*/
+//   background: #FF4400;
+//   border-radius:10px;
+//   width: 12px;
+//   height: 12px;
+//   margin: -10px 0 0 -10px;/*真ん中にくるようにマイナスマージンで調整*/
+//   z-index: 999;/*一番手前に来るように*/
+//   pointer-events: none;/*クリックできなくなるのを防ぐため。noneで対応*/
+//   opacity: 0;
+// }
+
+
+// TextRandomAnimeタイトルバラバラP312
+
+.TextRandomAnime span{
+  opacity: 0;
+}
+
+.TextRandomAnime .appearRandomtext span{
+  animation: text_randomanime_on 0.5s ease-out forwards;
+}
+@keyframes text_randomanime_on {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+.TextRandomAnime .appearRandomtext span:nth-child(2n){
+  animation-delay: 0.5s;
+}
+
+.TextRandomAnime .appearRandomtext span:nth-child(3n+1){
+  animation-delay: 0.15s;
+}
